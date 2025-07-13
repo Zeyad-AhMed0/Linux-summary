@@ -28,4 +28,4 @@ Feel free to fork, suggest edits, or open issues!
 
 ## 📌 Follow me
 **LinkedIn:** [Zeyad Ahmed Dardeer](https://www.linkedin.com/in/zeyad-ahmed-%F0%9F%87%B5%F0%9F%87%B8%E2%98%81%EF%B8%8F-5a9639356/)  
-**GitHub:** [Your GitHub Link]
+**GitHub:** [https://github.com/Zeyad-AhMed0]
