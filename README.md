@@ -18,6 +18,8 @@ If you're just starting out with Linux, you're in the right place 💻🚀
 | `07_networking.md` | Linux Networking Commands |
 | `08_shell_scripting.md` | Shell Scripting Basics |
 | `09_services_systemd.md` | Managing Services with systemd |
+| `10_linux_commands_cheatsheet.md` | all common commands and how to use it |
+
 
 ---
 
