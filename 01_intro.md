@@ -6,6 +6,14 @@ Linux is a free and open-source operating system based on Unix. It powers everyt
 
 ---
 
+الفرق بين Linux وUnix؟
+
+Unix: نظام تشغيل قديم ومملوك، يُستخدم غالبًا في السيرفرات والمؤسسات.
+
+Linux: إعادة تطوير مفتوحة المصدر مستوحاة من Unix، متاحة للجميع.
+
+---
+
 ## 🧠 Key Features
 - **Open Source:** Anyone can view, modify, and distribute the code.
 - **Multi-user & Multitasking:** Supports many users and processes at once.
@@ -29,6 +37,12 @@ Linux is a free and open-source operating system based on Unix. It powers everyt
 | **Kali Linux** | Designed for security and penetration testing |
 
 ---
+
+🧩 الفرق بين CLI و GUI 
+CLI (Command Line Interface): التعامل مع النظام عن طريق أوامر تُكتب في الطرفية (Terminal).
+GUI (Graphical User Interface): واجهة رسومية تتيح استخدام الماوس والنوافذ.
+
+ ---
 
 ## ✅ Why Learn Linux?
 - 💼 Required in DevOps, Cloud, Networking, and Cybersecurity.
