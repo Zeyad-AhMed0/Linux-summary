@@ -101,8 +101,10 @@ Restart=always
 
 [Install]
 WantedBy=multi-user.target
-فعّل وشغّل الخدمة:
 ```
+
+
+فعّل وشغّل الخدمة:
 
 ```bash
 
@@ -110,6 +112,8 @@ sudo systemctl daemon-reload
 sudo systemctl enable myscript
 sudo systemctl start myscript
 ```
+---
+
 ⚠️ نصائح للمحترفين
 
 لا تعدّل مباشرة على ملفات /lib/systemd/... — انسخها إلى /etc/systemd/... قبل التعديل.
