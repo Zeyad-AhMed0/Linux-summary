@@ -31,18 +31,27 @@
 ```bash
 sudo systemctl restart ssh
 ```
+---
+
 🚀 التحكم في التشغيل التلقائي
+
                              	
 systemctl enable service	تفعيل الخدمة لتعمل تلقائيًا عند الإقلاع
+
 systemctl disable service	تعطيل التشغيل التلقائي
+
 systemctl is-enabled service	التحقق إذا كانت الخدمة مفعلة تلقائيًا
+
 ---
 
 📂 أماكن ملفات الـ Unit
                           	
 /etc/systemd/system/	ملفات الخدمات المُخصصة (custom services)
+
 /lib/systemd/system/	ملفات الخدمات الافتراضية من النظام
+
 /etc/systemd/system/*.wants	روابط للخدمات المفعّلة عند الإقلاع
+
 
 ---
 
@@ -50,9 +59,14 @@ systemctl is-enabled service	التحقق إذا كانت الخدمة مفعل�
 
                         	
 systemctl list-units --type=service	 عرض كل الخدمات النشطة
+
 journalctl -u service 	عرض لوجات خدمة معينة
+
 systemctl daemon-reexec 	إعادة تشغيل systemd نفسه
+
 systemctl daemon-reload	 إعادة تحميل ملفات الـ unit بعد تعديلها
+
+---
 
 🧪 إنشاء خدمة مخصصة (Custom Service)
 
