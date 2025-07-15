@@ -1,4 +1,4 @@
-# 11_partitions.md — Disk Partitioning & Mounting
+# 10_partitions.md — Disk Partitioning & Mounting
 
 ## 🧱 مقدمة
 الـ Partitioning هو عملية تقسيم الهارد إلى أجزاء منطقية (partitions) يمكن للنظام التعامل معها.  
