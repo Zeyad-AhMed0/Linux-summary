@@ -75,8 +75,3 @@ nmap <your-ip>
 ```
 
 ---
-
-## 📚 مصادر إضافية:
-- `man ufw`, `man iptables`, `man ss`, `man lsof`
-- https://wiki.ubuntu.com/UFW
-- https://linux.die.net/man/8/iptables
