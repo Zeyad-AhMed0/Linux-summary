@@ -29,9 +29,9 @@ If you're just starting out with Linux, you're in the right place 💻🚀
 ✅ Notes
 
 - This summary is based on Ubuntu/Debian commands but works on most Linux distros.
-- 
+  
 - Each part includes practical examples and admin use cases.
-- 
+  
 - Useful for interview prep, certification study, and real-world DevOps/Cloud projects.
 
 ---  
