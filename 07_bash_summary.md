@@ -114,13 +114,128 @@ echo $((x * 2))  # 8
 
 ---
 
-## 📤 Redirection و Pipelines
+# Redirection & Pipelines in Linux
+
+## مقدمة
+Redirection و Pipelines من أهم مميزات الـ shell في لينكس.  
+بيتحكموا في تدفّق البيانات بين الـ commands، سواء بإعادة توجيه الـ input/output أو ربط أوامر ببعض في سلسلة واحدة.
+
+---
+
+# 1. Redirection  
+Redirection معناها إنك تغيّر مكان الـ **input** أو **output** بتاع أي command بدل ما يروح للـ terminal.
+
+## 1.1 Output Redirection
+إخراج الـ output لملف بدل الشاشة.
+
+### الكتابة فوق الملف (overwrite):
 ```bash
-echo "Hello" > file.txt       # إعادة توجيه الإخراج
-cat file.txt >> log.txt       # إضافة للإخراج الموجود
-command < input.txt           # قراءة من ملف
-ls -l | grep "txt"            # بايبلاين
-```
+command > file.txt
+الإضافة لنهاية الملف (append):
+bash
+نسخ الكود
+command >> file.txt
+1.2 Input Redirection
+استخدام ملف كمدخل للـ command:
+
+bash
+نسخ الكود
+command < file.txt
+1.3 Error Redirection
+Standard Error بيبقى رقم 2.
+
+إرسال الأخطاء فقط لملف:
+bash
+نسخ الكود
+command 2> errors.log
+دمج الـ Output + Error في ملف واحد:
+bash
+نسخ الكود
+command > output.log 2>&1
+أو:
+
+bash
+نسخ الكود
+command &> output.log
+(حسب نوع الشيل)
+
+1.4 دمج Input + Output
+توجيه output لملف، وأخذ input من ملف:
+
+bash
+نسخ الكود
+command1 < in.txt > out.txt
+2. Pipelines
+Pipeline (الرمز |) بيستخدم لربط commands ببعض.
+الـ Output بتاع command يدخل كـ Input للّي بعده من غير ملفات وسيطة.
+
+أمثلة:
+مثال 1: تصفية الملفات بالـ grep
+bash
+نسخ الكود
+ls -l | grep ".txt"
+مثال 2: عدّ السطور
+bash
+نسخ الكود
+cat access.log | wc -l
+مثال 3: فرز ثم اختيار أول 10 سطور
+bash
+نسخ الكود
+sort bigfile.txt | head
+2.1 إرسال الـ Error مع Output للـ Pipeline
+عشان الـ pipe بياخد الـ Standard Output بس…
+لو عايز تبعت الـ errors كمان، استخدم:
+
+bash
+نسخ الكود
+command 2>&1 | other_command
+3. أوامر إضافية مفيدة
+3.1 The tee Command
+بيكتب الـ output في ملف وفي نفس الوقت يعرضه على الشاشة.
+
+bash
+نسخ الكود
+command | tee output.txt
+لإضافة المحتوى بدل الكتابة فوقه:
+
+bash
+نسخ الكود
+command | tee -a output.txt
+3.2 Heredoc (<<)
+طريقة تدي command input من النص اللي تكتبه في نفس اللحظة.
+
+bash
+نسخ الكود
+cat << EOF
+Hello world
+This is a heredoc
+EOF
+Quick Notes
+> → كتابة output لملف
+
+>> → إضافة output لملف
+
+< → إدخال من ملف
+
+2> → توجيه errors
+
+2>&1 → دمج error مع output
+
+| → ربط output ل command بالـ input للّي بعده
+
+tee → حفظ output في ملف + عرضه
+
+<< → Heredoc لإرسال input مباشر للـ command
+
+خلاصة
+Redirection بيغير مسار الـ input/output،
+والـ pipeline بيربط commands ببعض كأنها stages في خط إنتاج.
+الاتنين مع بعض بيخلّوا الشيل قوة جبارة في معالجة البيانات والتحكم في الـ commands.
+
+
+---
+
+لو عايز أضيف شرح للـ **process substitution `<( )`** أو **named pipes (FIFOs)** عشان الريبو يبقى “full coverage”، قولّي وهكمّل الملف.
 
 ---
 
